@@ -1,13 +1,13 @@
 ///<reference path='node/node.d.ts' />
 ///<reference path='node/express.d.ts' />
 
-import http = module("http")
-import path = module("path")
-import express = module("express")
-import index = module("./routes/index")
-import user = module("./routes/user")
+import http = require("http")
+import path = require("path")
+import express = require("express")
+import index = require("./routes/index")
+import user = require("./routes/user")
 
-var app = express.createServer();
+var app = express();
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
